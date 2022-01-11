@@ -14,6 +14,8 @@ flask-login = "*"
 simplejson = "==3.17.0"
 flask-cors = "*"
 colorama = "*"
+flask-marshmallow = "*"
+marshmallow-sqlalchemy = "*"
 
 [dev-packages]
 

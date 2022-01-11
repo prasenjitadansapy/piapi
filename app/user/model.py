@@ -1,6 +1,7 @@
 from datetime import datetime
-from app import db
-from app.post.model import Post
+from app import db, ma
+from app.post.model import *
+from marshmallow import fields
 
 
 class User(db.Model):
@@ -12,3 +13,11 @@ class User(db.Model):
 
     def __repr__(self):
         return f"User({self.username}, {self.email})"
+
+class UserSchema(ma.SQLAlchemyAutoSchema):
+    # author = ma.Nested(PostSchema, many=True)
+    class Meta:
+        model = User
+        load_instance = True
+
+    author = fields.Nested(PostSchema(), many=True)
