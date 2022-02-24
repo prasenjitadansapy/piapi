@@ -17,6 +17,10 @@ colorama = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
 flask-jwt-extended = "*"
+gunicorn = "*"
+pip = "*"
+install = "*"
+waitress = "*"
 
 [dev-packages]
 
