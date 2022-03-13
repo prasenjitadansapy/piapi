@@ -12,9 +12,9 @@ class AlchemyEncoder(json.JSONEncoder):
                 data = obj.__getattribute__(field)
                 try:
                     if field != 'query' and field != 'query_class':
-                        print('field:', field, ' value: ', data)
+                        #print('field:', field, ' value: ', data)
                         if isinstance(data, datetime):
-                            print('field:', field, ' value: ', data)
+                            #print('field:', field, ' value: ', data)
                             data = data.isoformat()
 
                         json.dumps(data)
