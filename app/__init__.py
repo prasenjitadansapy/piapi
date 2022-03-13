@@ -2,23 +2,18 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 # from flask_login import LoginManager
-from app.config import Config, JWT_SUPER_SECRET_KEY
+# from app.config import Config, JWT_SUPER_SECRET_KEY
 from flask_jwt_extended import JWTManager
-from datetime import timedelta
 from flask_cors import CORS, cross_origin
 # from flask_marshmallow import Marshmallow
 
 app = Flask(__name__)
 cors = CORS(app)
-app.config.from_object(Config)
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config.from_object('config.Config')
+#app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 # ma = Marshmallow(app)
 bcrypt = Bcrypt(app)
-# login_manager = LoginManager(app)
-app.config["JWT_SECRET_KEY"] = JWT_SUPER_SECRET_KEY
-app.config["JWT_ACCESS_TOKEN_EXPIRES"] = timedelta(hours=1)
-app.config["JWT_REFRESH_TOKEN_EXPIRES"] = timedelta(days=30)
 jwt = JWTManager(app)
 
 ##Modules Import

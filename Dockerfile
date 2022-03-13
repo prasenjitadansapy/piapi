@@ -1,5 +1,5 @@
 FROM python:3.7
-LABEL maintainer = 'ghoshprasenjit2008@gmail.com'
+LABEL maintainer = 'neeraj@realbooks.in'
 
 WORKDIR /usr/src/app
 
