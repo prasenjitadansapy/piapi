@@ -5,24 +5,13 @@ name = "pypi"
 
 [packages]
 flask = "*"
-flask-wtf = "*"
-email-validator = "*"
 flask-sqlalchemy = "*"
-pymysql = "*"
 flask-bcrypt = "*"
-flask-login = "*"
-simplejson = "==3.17.0"
-flask-cors = "*"
-colorama = "*"
-flask-marshmallow = "*"
-marshmallow-sqlalchemy = "*"
 flask-jwt-extended = "*"
-gunicorn = "*"
-pip = "*"
-install = "*"
-waitress = "*"
+flask-cors = "*"
+pymysql = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"
